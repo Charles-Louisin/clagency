@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const PHONES = [
   {
-    src: "/images/mes-poches-phone-1.PNG",
+    src: "/images/mes-poches-phone-1.png",
     alt: "Mes Poches — écran solde et aperçu financier",
     rotate: -8,
     yOffset: [60, -40] as [number, number],
@@ -14,7 +14,7 @@ const PHONES = [
     delay: 0,
   },
   {
-    src: "/images/mes-poches-phone-2.PNG",
+    src: "/images/mes-poches-phone-2.png",
     alt: "Mes Poches — liste des transactions",
     rotate: 8,
     yOffset: [100, -20] as [number, number],

@@ -30,7 +30,7 @@ export function ProjectKoumale() {
               <div className="relative aspect-[9/19] overflow-hidden rounded-[2rem] bg-[#16161a]">
                 <div className="absolute top-0 left-1/2 z-10 h-6 w-28 -translate-x-1/2 rounded-b-2xl bg-[#111114]" />
                 <Image
-                  src="/images/koumale-mobile.PNG"
+                  src="/images/koumale-mobile.png"
                   alt="Interface mobile KOUMALE — marketplace multi-vendeurs"
                   fill
                   sizes="280px"

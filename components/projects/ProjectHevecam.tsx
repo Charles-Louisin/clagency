@@ -43,7 +43,7 @@ export function ProjectHevecam() {
             className="relative min-h-[280px] overflow-hidden border border-border bg-surface md:col-span-8 md:min-h-[360px]"
           >
             <Image
-              src="/images/hevecam-dashboard.PNG"
+              src="/images/hevecam-dashboard.png"
               alt="Dashboard SaaS HEVECAM — gestion hospitalière"
               fill
               sizes="(max-width: 768px) 100vw, 66vw"

@@ -5,21 +5,21 @@ import { motion } from "framer-motion";
 
 const SHOTS = [
   {
-    src: "/images/atelier-1.JPG",
+    src: "/images/atelier-1.jpg",
     alt: "Session de conception UI — CL Agency",
     caption: "Conception & wireframes",
     span: "md:col-span-7 md:row-span-2",
     aspect: "aspect-[4/5] md:aspect-auto md:min-h-[520px]",
   },
   {
-    src: "/images/atelier-2.JPG",
+    src: "/images/atelier-2.jpg",
     alt: "Développement en cours — CL Agency",
     caption: "Ingénierie produit",
     span: "md:col-span-5",
     aspect: "aspect-[16/10]",
   },
   {
-    src: "/images/atelier-3.JPG",
+    src: "/images/atelier-3.jpg",
     alt: "Revue d'équipe — CL Agency",
     caption: "Revue & itération",
     span: "md:col-span-5",

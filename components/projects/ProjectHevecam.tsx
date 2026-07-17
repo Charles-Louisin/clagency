@@ -43,12 +43,13 @@ export function ProjectHevecam() {
             className="relative min-h-[280px] overflow-hidden border border-border bg-surface md:col-span-8 md:min-h-[360px]"
           >
             <Image
-              src="/images/hevecam-dashboard.png"
+              src="/images/hevecam-dashboard.webp"
               alt="Dashboard SaaS HEVECAM — gestion hospitalière"
               fill
               sizes="(max-width: 768px) 100vw, 66vw"
+              quality={75}
+              loading="lazy"
               className="object-cover opacity-80"
-              unoptimized
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             <div className="absolute right-4 bottom-4 left-4 md:right-6 md:bottom-6 md:left-6">

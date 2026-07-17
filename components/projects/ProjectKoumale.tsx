@@ -30,12 +30,13 @@ export function ProjectKoumale() {
               <div className="relative aspect-[9/19] overflow-hidden rounded-[2rem] bg-[#16161a]">
                 <div className="absolute top-0 left-1/2 z-10 h-6 w-28 -translate-x-1/2 rounded-b-2xl bg-[#111114]" />
                 <Image
-                  src="/images/koumale-mobile.png"
+                  src="/images/koumale-mobile.webp"
                   alt="Interface mobile KOUMALE — marketplace multi-vendeurs"
                   fill
                   sizes="280px"
+                  quality={75}
+                  loading="lazy"
                   className="object-cover object-top"
-                  unoptimized
                 />
                 <div className="absolute inset-x-4 bottom-6 rounded-2xl border border-white/10 bg-[#0A0A0C]/85 p-4 backdrop-blur-sm">
                   <p className="font-mono text-[10px] tracking-wider text-accent-bright uppercase">

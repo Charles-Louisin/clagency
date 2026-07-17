@@ -17,7 +17,7 @@ export function CaseStudiesSection({ mode = "preview" }: CaseStudiesSectionProps
         </h2>
         <p className="mt-4 max-w-xl text-base text-muted">
           {mode === "full"
-            ? "Chaque mission a sa propre architecture et sa propre mise en page. Ajoutez ici vos prochaines réalisations."
+            ? "Chaque mission a sa propre architecture et sa propre mise en page."
             : "Trois architectures. Trois mises en page. Une même exigence d\'ingénierie."}
         </p>
       </div>

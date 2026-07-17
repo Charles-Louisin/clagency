@@ -1,38 +1,35 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const SHOTS = [
   {
-    src: "/images/atelier-1.jpg",
+    src: "/images/atelier-1.webp",
     alt: "Session de conception UI — CL Agency",
-    caption: "Conception & wireframes",
     span: "md:col-span-7 md:row-span-2",
-    aspect: "aspect-[4/5] md:aspect-auto md:min-h-[520px]",
+    aspect: "aspect-[4/5] md:aspect-auto md:h-full",
+    sizes: "(max-width: 768px) 100vw, 58vw",
+    priority: true,
   },
   {
-    src: "/images/atelier-2.jpg",
+    src: "/images/atelier-2.webp",
     alt: "Développement en cours — CL Agency",
-    caption: "Ingénierie produit",
     span: "md:col-span-5",
-    aspect: "aspect-[16/10]",
+    aspect: "aspect-[3/4] md:aspect-[4/3]",
+    sizes: "(max-width: 768px) 100vw, 42vw",
+    priority: false,
   },
   {
-    src: "/images/atelier-3.jpg",
+    src: "/images/atelier-3.webp",
     alt: "Revue d'équipe — CL Agency",
-    caption: "Revue & itération",
     span: "md:col-span-5",
-    aspect: "aspect-[16/10]",
+    aspect: "aspect-[3/4] md:aspect-[4/3]",
+    sizes: "(max-width: 768px) 100vw, 42vw",
+    priority: false,
   },
-] as const;
+];
 
 export function AtelierSection() {
   return (
-    <section
-      id="atelier"
-      className="border-t border-border py-24 md:py-32"
-    >
+    <section id="atelier" className="border-t border-border py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-14 max-w-2xl">
           <p className="font-mono text-[11px] tracking-[0.2em] text-muted uppercase">
@@ -47,29 +44,22 @@ export function AtelierSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-          {SHOTS.map((shot, i) => (
-            <motion.figure
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:grid-rows-2">
+          {SHOTS.map((shot) => (
+            <figure
               key={shot.src}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: i * 0.08, duration: 0.45 }}
-              className={`group relative overflow-hidden border border-border bg-surface ${shot.span} ${shot.aspect}`}
+              className={`group relative overflow-hidden border border-border bg-muted/20 ${shot.span} ${shot.aspect}`}
             >
-              {/* Remplacez les SVG par vos photos (jpg/png/webp) dans /public/images/ */}
               <Image
                 src={shot.src}
                 alt={shot.alt}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                unoptimized
+                sizes={shot.sizes}
+                quality={80}
+                priority={shot.priority}
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              {/* <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-5 py-4 text-sm text-white">
-                {shot.caption}
-              </figcaption> */}
-            </motion.figure>
+            </figure>
           ))}
         </div>
       </div>

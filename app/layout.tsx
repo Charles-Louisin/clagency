@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CL Agency — Développement & Ingénierie Web",
+  title: "CL Agency",
   description:
     "CL Agency conçoit des plateformes web sur mesure, des solutions e-commerce et des applications métiers.",
   icons: {

@@ -1,10 +1,25 @@
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { VoidFooter } from "@/components/VoidFooter";
 import { AGENCY_NAME } from "@/lib/constants";
+import { LoadingWithLogo } from "@/components/LoadingWithLogo";
+
+const CaseStudiesSection = dynamic(
+  () =>
+    import("@/components/CaseStudiesSection").then((m) => m.CaseStudiesSection),
+  {
+    loading: () => <LoadingWithLogo className="min-h-[50vh]" />,
+  }
+);
+
+const VoidFooter = dynamic(
+  () => import("@/components/VoidFooter").then((m) => m.VoidFooter),
+  {
+    loading: () => <LoadingWithLogo className="min-h-[30vh] bg-black" />,
+  }
+);
 
 export const metadata: Metadata = {
   title: `Projets — ${AGENCY_NAME}`,

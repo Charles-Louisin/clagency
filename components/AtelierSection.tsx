@@ -7,7 +7,6 @@ const SHOTS = [
     span: "md:col-span-7 md:row-span-2",
     aspect: "aspect-[4/5] md:aspect-auto md:h-full",
     sizes: "(max-width: 768px) 100vw, 58vw",
-    priority: true,
   },
   {
     src: "/images/atelier-2.webp",
@@ -15,7 +14,6 @@ const SHOTS = [
     span: "md:col-span-5",
     aspect: "aspect-[3/4] md:aspect-[4/3]",
     sizes: "(max-width: 768px) 100vw, 42vw",
-    priority: false,
   },
   {
     src: "/images/atelier-3.webp",
@@ -23,7 +21,6 @@ const SHOTS = [
     span: "md:col-span-5",
     aspect: "aspect-[3/4] md:aspect-[4/3]",
     sizes: "(max-width: 768px) 100vw, 42vw",
-    priority: false,
   },
 ];
 
@@ -56,7 +53,7 @@ export function AtelierSection() {
                 fill
                 sizes={shot.sizes}
                 quality={80}
-                priority={shot.priority}
+                loading="lazy"
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
               />
             </figure>

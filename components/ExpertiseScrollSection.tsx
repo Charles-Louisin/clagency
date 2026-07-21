@@ -31,7 +31,7 @@ function RevealBlock({ title, body }: { title: string; body: string }) {
       <h3 className="mb-4 text-2xl font-semibold tracking-tight text-ink md:text-3xl">
         {title}
       </h3>
-      <p className="text-lg leading-relaxed text-muted md:text-xl">
+      <p className="text-lg leading-relaxed text-ink md:text-xl">
         {body}
       </p>
     </motion.div>

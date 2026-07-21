@@ -114,7 +114,13 @@ export function LiquidImage({ src, alt, className = "" }: LiquidImageProps) {
   if (reduced) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={src} alt={alt} className={`h-full w-full object-cover ${className}`} />
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className={`h-full w-full object-cover ${className}`}
+      />
     );
   }
 
@@ -125,6 +131,8 @@ export function LiquidImage({ src, alt, className = "" }: LiquidImageProps) {
         <img
           src={src}
           alt={alt}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
       )}
